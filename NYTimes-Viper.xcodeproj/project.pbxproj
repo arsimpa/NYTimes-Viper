@@ -99,6 +99,7 @@
 		995963A6264328E700BCE9A9 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		995963A7264328E700BCE9A9 /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		995963B1264334F400BCE9A9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		995963B62643464200BCE9A9 /* ADIB.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ADIB.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		995F0EC72642A1A600692F56 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		995F0ED02642A90E00692F56 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		995F0ED82642A9FE00692F56 /* SettingsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTest.swift; sourceTree = "<group>"; };
@@ -268,6 +269,7 @@
 		99F8C0ED26402CB500DD7087 = {
 			isa = PBXGroup;
 			children = (
+				995963B62643464200BCE9A9 /* ADIB.playground */,
 				99F8C0F826402CB500DD7087 /* NYTimes-Viper */,
 				99F8C10F26402CBA00DD7087 /* NYTimes-ViperTests */,
 				99F8C11A26402CBA00DD7087 /* NYTimes-ViperUITests */,
