@@ -33,15 +33,15 @@ The application provided three actions to user:
 2. Change Settings i.e Period Settings and Dark Mode.
 3. Change menu from side drawer.
 
-1. For the demo purpose user is allowed to search in **Title** and **Abstract** of the article.
+For the demo purpose user is allowed to search in **Title** and **Abstract** of the article.
 
-2. To change settings user can tap to top right button to open SettingsVC. Once done doing changes close the controller by dragging it down and it will apply the changes automatically. User can also transition between light and dark mode by simply changing the Switch. All views uses Dynamic colors and supports both Dark/Light mode.
+To change settings user can tap to top right button to open SettingsVC. Once done doing changes close the controller by dragging it down and it will apply the changes automatically. User can also transition between light and dark mode by simply changing the Switch. All views uses Dynamic colors and supports both Dark/Light mode.
 
-3. User can also change Menu from left top bar button. For the purpose of demo only one dummy View controller has been added.
+User can also change Menu from left top bar button. For the purpose of demo only one dummy View controller has been added.
 
 # Networking
 
-For network calls Apples URLSession has been used. A Client is written on top of URLSession.
+For network calls no third party library has been used. A Client is written which uses Apples default Networking framework.
 The HttpClient fully supports Dependency Injection(DI), a very core concept of VIPER. DI has many advantages as it provides easy way to Mocking of API requests.
 
 # Interceptors
