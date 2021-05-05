@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Bb-Qz-a51">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Most Viewed-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ArticleListViewController" customModule="NYTimes_Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SQd-DM-HRG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OlL-X1-J5p">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Php-mA-vck">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kdY-4e-8X2">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="54a-2J-hQg"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BCA-mB-lWi">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BCA-mB-lWi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B84-Xo-thq"/>
+                            <constraint firstItem="SQd-DM-HRG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="baz-ZN-hac"/>
+                            <constraint firstItem="SQd-DM-HRG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ggj-uF-5QO"/>
+                            <constraint firstItem="SQd-DM-HRG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jx8-28-A5v"/>
+                            <constraint firstItem="BCA-mB-lWi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pZZ-5G-8xq"/>
+                            <constraint firstItem="SQd-DM-HRG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="swO-AI-fZp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Most Viewed" id="hcC-l3-zey">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="sidebar.left" catalog="system" id="VJN-Ha-emc"/>
+                        <barButtonItem key="rightBarButtonItem" image="menubar.dock.rectangle.badge.record" catalog="system" style="plain" id="Vgf-nh-KeZ">
+                            <connections>
+                                <action selector="btnSettingTapped:" destination="BYZ-38-t0r" id="Z7k-mV-bKX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="BCA-mB-lWi" id="O0n-ki-lcd"/>
+                        <outlet property="cvArticles" destination="SQd-DM-HRG" id="hRM-mG-Zkn"/>
+                        <outlet property="sideMenuBtn" destination="VJN-Ha-emc" id="hve-yK-GyT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763.768115942029" y="93.75"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="u98-9s-LcW">
+            <objects>
+                <viewController id="Cu9-UQ-QUv" customClass="SecondViewController" customModule="NYTimes_Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ex-1i-0SD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xss-ed-QiQ">
+                                <rect key="frame" x="153" y="437.5" width="108.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NKz-q6-ZEx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xss-ed-QiQ" firstAttribute="centerX" secondItem="2ex-1i-0SD" secondAttribute="centerX" id="sGf-ql-2pY"/>
+                            <constraint firstItem="Xss-ed-QiQ" firstAttribute="centerY" secondItem="2ex-1i-0SD" secondAttribute="centerY" id="ttq-eo-PnI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vFl-lY-l72">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="sidebar.left" catalog="system" id="rwX-20-e0x"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sideMenuBtn" destination="rwX-20-e0x" id="Evu-T2-5K1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoW-8Y-Vbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2928.985507246377" y="93.75"/>
+        </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="Ljj-A6-Rdl">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuID" id="SO3-9A-Boh" customClass="SideMenuViewController" customModule="NYTimes_Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F8T-EL-Pgo">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYTimes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVW-pp-tu1">
+                                <rect key="frame" x="16" y="44" width="118.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ze4-s9-1sO">
+                                <rect key="frame" x="0.0" y="101.5" width="260" height="760.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="owX-jj-TbV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ze4-s9-1sO" firstAttribute="trailing" secondItem="owX-jj-TbV" secondAttribute="trailing" id="LVD-hs-sKQ"/>
+                            <constraint firstItem="ze4-s9-1sO" firstAttribute="bottom" secondItem="owX-jj-TbV" secondAttribute="bottom" id="Sz0-AJ-jwM"/>
+                            <constraint firstItem="ze4-s9-1sO" firstAttribute="top" secondItem="pVW-pp-tu1" secondAttribute="bottom" constant="24" id="UVl-oI-m2r"/>
+                            <constraint firstItem="ze4-s9-1sO" firstAttribute="leading" secondItem="owX-jj-TbV" secondAttribute="leading" id="dSG-p5-2I9"/>
+                            <constraint firstItem="pVW-pp-tu1" firstAttribute="leading" secondItem="owX-jj-TbV" secondAttribute="leading" constant="16" id="epu-En-ttm"/>
+                            <constraint firstItem="pVW-pp-tu1" firstAttribute="top" secondItem="owX-jj-TbV" secondAttribute="top" id="qch-Bb-Jd9"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="260" height="896"/>
+                    <connections>
+                        <outlet property="sideMenuTableView" destination="ze4-s9-1sO" id="zgY-3V-TMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hk1-e4-odT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49.275362318840585" y="-613.39285714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eGH-Vx-UU7">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavID" automaticallyAdjustsScrollViewInsets="NO" id="B8O-wF-9Tb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ecu-Co-Zen">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ffq-Sr-xgV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQe-4T-Igi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="93.75"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="NQ6-pK-21T">
+            <objects>
+                <viewController id="7Bb-Qz-a51" customClass="MainViewController" customModule="NYTimes_Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DsY-vR-Ccn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qey-2h-1LG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJC-ot-EWy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="-613"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D9t-E7-FhZ">
+            <objects>
+                <navigationController storyboardIdentifier="SecondTabID" automaticallyAdjustsScrollViewInsets="NO" id="zV6-yy-cQZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tIm-si-Ksk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cu9-UQ-QUv" kind="relationship" relationship="rootViewController" id="0oI-ew-Phl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NN7-0H-8SK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018.840579710145" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menubar.dock.rectangle.badge.record" catalog="system" width="128" height="95"/>
+        <image name="sidebar.left" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
